@@ -1,0 +1,39 @@
+.task-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  border-left-color: #27ae60;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.task-description {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.task-meta {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
