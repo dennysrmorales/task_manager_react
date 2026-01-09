@@ -17,7 +17,8 @@ function App() {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(API_URL);
-      setTasks(response.data);
+      // Handle paginated response (results array) or direct array
+      setTasks(response.data.results || response.data);
     } catch (error) {
       showMessage('Error fetching tasks', 'error');
       console.error('Error fetching tasks:', error);
