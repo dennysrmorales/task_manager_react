@@ -73,6 +73,7 @@ function App() {
   // Toggle task completion
   const handleToggle = async (id) => {
     try {
+      console.log('toggling tasasfasdfsk', id);
       const response = await axios.post(`${API_URL}${id}/toggle/`);
       showMessage(
         `Task marked as ${response.data.completed ? 'completed' : 'incomplete'}!`,
@@ -124,6 +125,17 @@ function App() {
                 onClick={() => setShowForm(true)}
               >
                 + Create New Task
+              </button>
+            </div>
+            {/* Sentry Test Button - Remove in production */}
+            <div style={{ marginBottom: '20px' }}>
+              <button
+                className="btn btn-danger"
+                onClick={() => {
+                  throw new Error('This is your first error!');
+                }}
+              >
+                Break the world
               </button>
             </div>
             <TaskList
