@@ -3,6 +3,13 @@ Django settings for myproject project.
 """
 
 from pathlib import Path
+import sentry_sdk  # <--- import Sentry here
+
+# Initialize Sentry SDK
+sentry_sdk.init(
+    dsn="https://16854a70ff186b9837a0f3b6926aee48@o4510689671708672.ingest.us.sentry.io/4510689674461184",
+    send_default_pii=True,
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
